@@ -1,0 +1,6 @@
+{% for post in posts|dictsortreversed:'id' %} 
+  <hr>
+  {% if request.resolver_match.view_name == 'blog:index' %}
+    {% include "includes/post.html" %}
+  {% endif %}
+{% endfor %} 
